@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sentense Case Converter</title>
+    <script>
+      function tosentensecase() {
+        // Get the input string
+        var inputStr = document.getElementById("input").value;
+
+        // Split the string into an array of words
+        var words = inputStr[0].toUpperCase();
+        // Convert each word to camel case
+        for (var i = 1; i < inputStr.length; i++) {
+          if(inputStr[i-2]=="."){ 
+            words = words + inputStr[i].toUpperCase();
+          }
+          else{
+            words = words + inputStr[i].toLowerCase();
+          }
+          
+        }
+
+        // Join the words back together into a string
+
+        // Display the result
+        document.getElementById("output").innerHTML = words;
+      }
+    </script>
+    <link rel="stylesheet" href="./forall.css">
+  </head>
+  <body>
+    <h1>sentense Case Converter</h1>
+    <p><strong>Enter a string:</strong></p>
+    <input type="text" id="input">
+    <button onclick="tosentensecase()">Convert to sentense Case</button>
+    <p>sentense case string: </p>
+    <p1 id="output"></p1>
+  </body>
+</html>

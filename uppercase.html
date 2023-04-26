@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upper Case Converter</title>
+    <script>
+      function toUppercase() {
+        // Get the input string
+        var inputStr = document.getElementById("input").value;
+
+        // Split the string into an array of words
+        var words = "";
+        // Convert each word to camel case
+        for (var i = 0; i < inputStr.length; i++) {
+            words = words + inputStr[i].toUpperCase();
+          }
+
+        // Join the words back together into a string
+
+        // Display the result
+        document.getElementById("output").innerHTML = words;
+      }
+    </script>
+    <link rel="stylesheet" href="./forall.css">
+  </head>
+  <body>
+    <h1>Upper Case Converter</h1>
+    <p><strong>Enter a string:</strong></p>
+    <input type="text" id="input">
+    <button onclick="toUppercase()">Convert to Upper Case</button>
+    <p>Upper case string: </p>
+    <p1 id="output"></p1>
+  </body>
+</html>

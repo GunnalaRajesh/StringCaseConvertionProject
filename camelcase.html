@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camel Case Converter</title>
+    <script>
+      function toCamelCase() {
+        // Get the input string
+        var inputStr = document.getElementById("input").value;
+
+        // Split the string into an array of words
+        var words = inputStr[0];
+        // Convert each word to camel case
+        for (var i = 0; i < inputStr.length-1; i++) {
+          if(inputStr[i] == " "){
+            words = words + inputStr[i+1].toUpperCase();
+          }
+          else{
+            words = words + inputStr[i+1].toLowerCase();
+          }
+        }
+
+        // Join the words back together into a string
+
+        // Display the result
+        document.getElementById("output").innerHTML = words;
+      }
+    </script>
+    <link rel="stylesheet" href="./forall.css">
+  </head>
+  <body>
+    <h1>Camel Case Converter</h1>
+    <p><strong>Enter a string:</strong></p>
+    <input type="text" id="input">
+    <button onclick="toCamelCase()">Convert to Camel Case</button>
+    <p>Camel case string: </p>
+    <p1 id="output"></p1>
+  </body>
+</html>

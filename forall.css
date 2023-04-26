@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+    background-image: url(./cool-css-backgrounds.jpg);
+    background-size: 100%;
+    transform: translate(0%, 65%);
+    
+      
+}
+p1{
+    font-size: 130%;
+}
